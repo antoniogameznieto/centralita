@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Centralita 1.0-->
+        <!--Centralita-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BlueTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -61,6 +61,7 @@
                                         <connections>
                                             <outlet property="nameLabel" destination="43q-rE-AyM" id="a7o-D3-X6i"/>
                                             <outlet property="rssiLabel" destination="Msv-AG-fhB" id="SxT-0S-fvH"/>
+                                            <segue destination="mOf-Vp-cNn" kind="show" identifier="showConexion" id="GUU-S1-S3R"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -100,8 +101,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Centralita 1.0" id="Ubs-XC-nI7">
-                        <barButtonItem key="leftBarButtonItem" title="Info" id="SNg-YX-Ufj"/>
+                    <navigationItem key="navigationItem" title="Centralita" id="Ubs-XC-nI7">
+                        <barButtonItem key="leftBarButtonItem" title="Info" id="SNg-YX-Ufj">
+                            <connections>
+                                <segue destination="VLP-TT-azG" kind="show" identifier="showInfo" id="GYB-ey-ZCP"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="D3c-m5-eK9">
                             <connections>
                                 <action selector="refreshTapped:" destination="BYZ-38-t0r" id="ebe-ot-LtF"/>
@@ -115,6 +120,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="888.79999999999995" y="-564.46776611694156"/>
+        </scene>
+        <!--Centralita View Controller-->
+        <scene sceneID="vJE-aa-3aC">
+            <objects>
+                <viewController id="mOf-Vp-cNn" customClass="CentralitaViewController" customModule="BlueTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="27F-Zs-x4o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conexión a Pilichina" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGd-Rg-Ec2">
+                                <rect key="frame" x="20" y="84" width="335" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="battery" translatesAutoresizingMaskIntoConstraints="NO" id="BP1-K9-FOR">
+                                <rect key="frame" x="20" y="122" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1250 m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQz-vC-iuL">
+                                <rect key="frame" x="69" y="122" width="87" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ici-t8-WIb" firstAttribute="trailing" secondItem="hGd-Rg-Ec2" secondAttribute="trailing" constant="20" id="ZDU-NW-Dm8"/>
+                            <constraint firstItem="hGd-Rg-Ec2" firstAttribute="top" secondItem="ici-t8-WIb" secondAttribute="top" constant="20" id="hg7-EZ-wye"/>
+                            <constraint firstItem="hGd-Rg-Ec2" firstAttribute="leading" secondItem="ici-t8-WIb" secondAttribute="leading" constant="20" id="o2A-He-kmh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ici-t8-WIb"/>
+                    </view>
+                    <connections>
+                        <outlet property="etiquetaConexion" destination="hGd-Rg-Ec2" id="FAy-xX-Rtp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Ij-FV-4OC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1648.8" y="-564.46776611694156"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yj3-tH-csl">
@@ -134,8 +181,37 @@
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="-564.46776611694156"/>
         </scene>
+        <!--Informacion View Controller-->
+        <scene sceneID="Ycu-P0-v4S">
+            <objects>
+                <viewController id="VLP-TT-azG" customClass="InformacionViewController" customModule="BlueTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nlj-NK-dzB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Información de la APP en esta pantalla" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJ9-Q3-wF3">
+                                <rect key="frame" x="20" y="84" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uMN-hQ-7Sd" firstAttribute="trailing" secondItem="OJ9-Q3-wF3" secondAttribute="trailing" constant="20" id="7IN-Pl-I8O"/>
+                            <constraint firstItem="OJ9-Q3-wF3" firstAttribute="leading" secondItem="nlj-NK-dzB" secondAttribute="leading" constant="20" id="llp-Mx-eO5"/>
+                            <constraint firstItem="OJ9-Q3-wF3" firstAttribute="top" secondItem="uMN-hQ-7Sd" secondAttribute="top" constant="20" id="veH-j5-cU3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uMN-hQ-7Sd"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fzD-ly-6qG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1649" y="-1245"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="battery" width="171" height="171"/>
         <image name="bluetooth" width="171" height="171"/>
     </resources>
 </document>
