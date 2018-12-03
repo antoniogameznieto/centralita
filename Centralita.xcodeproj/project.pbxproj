@@ -12,6 +12,7 @@
 		8426920F21B5A03500A18C14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8426920D21B5A03500A18C14 /* Main.storyboard */; };
 		8426921121B5A03600A18C14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8426921021B5A03600A18C14 /* Assets.xcassets */; };
 		8426921421B5A03600A18C14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8426921221B5A03600A18C14 /* LaunchScreen.storyboard */; };
+		8426921C21B5A3FF00A18C14 /* BlueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426921B21B5A3FF00A18C14 /* BlueTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		8426921021B5A03600A18C14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8426921321B5A03600A18C14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8426921521B5A03600A18C14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8426921B21B5A3FF00A18C14 /* BlueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				8426920921B5A03500A18C14 /* AppDelegate.swift */,
 				8426920B21B5A03500A18C14 /* ViewController.swift */,
+				8426921B21B5A3FF00A18C14 /* BlueTableViewCell.swift */,
 				8426920D21B5A03500A18C14 /* Main.storyboard */,
 				8426921021B5A03600A18C14 /* Assets.xcassets */,
 				8426921221B5A03600A18C14 /* LaunchScreen.storyboard */,
@@ -99,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8426920121B5A03500A18C14 /* Build configuration list for PBXProject "BlueTracker" */;
+			buildConfigurationList = 8426920121B5A03500A18C14 /* Build configuration list for PBXProject "Centralita" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8426920C21B5A03500A18C14 /* ViewController.swift in Sources */,
+				8426921C21B5A3FF00A18C14 /* BlueTableViewCell.swift in Sources */,
 				8426920A21B5A03500A18C14 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,7 +293,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.antoniogamez.BlueTracker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.antoniogamez.centralita;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,7 +311,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.antoniogamez.BlueTracker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.antoniogamez.centralita;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,7 +321,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8426920121B5A03500A18C14 /* Build configuration list for PBXProject "BlueTracker" */ = {
+		8426920121B5A03500A18C14 /* Build configuration list for PBXProject "Centralita" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8426921621B5A03600A18C14 /* Debug */,
